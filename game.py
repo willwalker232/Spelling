@@ -1,48 +1,30 @@
-
-name = input("What is your name")
-swag_level = 1000 
-if name == "Emily":
-	print("Your swag level is choddy ,0!")
-else:
-	print("Your swag level is chode" , swag_level)
-
-
-
-
-level_number = 14
-total = 4
-def award(level, score):
-	if score < 5:
-		award = 'bronze'
-	if score >= 5 and score < 8:
-		award = 'silver'
-	if score >= 8 and score < 11:
-		award = 'gold'
-	if score >= 11:
-		award = 'platinum'
-	
-	return award
-		
-
-Badge = award(level_number,total)
-
-print ('he \n hey')
-
-words = ["hello", "hi", "go"]
-
-#retrieve (10]{!
-             # words from specific level
-             # aaaaaaaaaaaaaaaaaaaaaaaaaaaa-aaaaaaaaaaa aaaaa%
-
 import csv
 import time 
+import os
               
+def retrieve_words(table, level):
+	cursor.execute("SELECT word FROM ? WHERE level=?", (table,level,)) #levels are 1 2 or 3
+		if db.fetchall():
+			cursor.execute("SELECT word FROM ? WHERE level=?", (table,level,))
+			data=db.fetchall()
+			return data
+		db.close()
 
+def select_rand_word(data):
+	lists = []
+	while (len(lists)) != 10:
+		length = (len(data) - 1)
+		random = random.randint(0, length)
+		lists.append(data[random])
+		data.remove(data[random])
+		
+	return lists
+		
+	
 def game(words):
 	for each in words:
 		print(each)
 	time.sleep(5)
-	import os
 	os.system('clear')
 	counter = 0
 	score=0
@@ -54,11 +36,6 @@ def game(words):
 				score +=1
 		counter+=1
 	return score
-			
-game(words)	
         
 
-#display 10 words for 10 seconds 
-
-#set timer for 1 minute to enter word and check if there 
 
