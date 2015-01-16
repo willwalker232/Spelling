@@ -1,14 +1,5 @@
 
 name = input("What is your name")
-swag_level = 1000 
-if name == "Emily":
-	print("Your swag level is choddy ,0!")
-else:
-	print("Your swag level is chode" , swag_level)
-
-
-
-
 level_number = 14
 total = 4
 def award(level, score):
@@ -25,10 +16,6 @@ def award(level, score):
 		
 
 Badge = award(level_number,total)
-
-print ('he \n hey')
-
-words = ["hello", "hi", "go"]
 
 #retrieve (10]{!
              # words from specific level
