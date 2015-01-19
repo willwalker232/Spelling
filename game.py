@@ -1,16 +1,4 @@
-import csv
-import time 
-import os
-import random 
-              
-def retrieve_words(table, level):
-	cursor.execute("SELECT word FROM ? WHERE level=?", (table,level,)) #levels are 1 2 or 3
-	if db.fetchall():
-		cursor.execute("SELECT word FROM ? WHERE level=?", (table,level,))
-		data=db.fetchall()
-		return data
-		db.close()
-
+             
 def select_rand_word(data):
 	lists = []
 	while (len(lists)) != 10:
