@@ -1,4 +1,7 @@
-             
+import random
+import os
+import time
+
 def select_rand_word(data):
 	lists = []
 	while (len(lists)) != 10:

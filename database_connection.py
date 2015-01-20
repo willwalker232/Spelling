@@ -22,9 +22,9 @@ def retrieve_words(level):
 	else:
 		# Close the db connection
 		cursor.execute("SELECT word FROM words WHERE level=?", (level,)) #levels are 1 2 or 3
-		if db.fetchall():
+		if cursor.fetchone():
 			cursor.execute("SELECT word FROM words WHERE level=?", (level,))
-			data=db.fetchall()
+			data=cursor.fetchall()
 			return data
 		db.close()
 
