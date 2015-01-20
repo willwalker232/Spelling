@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import csv
+import time 
+              
+
+=======
 import random
 import os
 import time
@@ -19,6 +25,7 @@ def select_rand_word(data):
 		counter += 1
 	return words
 		
+>>>>>>> 808a0b04f2f9f80a72f5c5938afae6968e3da929
 def game(words):
 	for each in words:
 		print(each)
