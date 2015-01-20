@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 '''
 bronze = False
 silver = False
@@ -61,3 +62,7 @@ times_played_achievement = achievement_first_time(played)
 completed = medal_achievement[1]'''
 
 
+=======
+__author__ = 'matthewcrown'
+#To change this template use Tools | Templates.
+>>>>>>> 808a0b04f2f9f80a72f5c5938afae6968e3da929
