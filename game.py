@@ -26,13 +26,17 @@ def game(words):
 	os.system('clear')
 	counter = 0
 	score=0
-	for word in words:
+	while counter < 10:
 		check = input("Enter a word from list").lower()
-		if word == check:
+		if check in words:
 			print("Correct")
+			words.remove(check)
 			score +=1
+		else:
+			print("Incorrect")
+		counter+=1
 	return score
-        
+		
 def menu():
 	print("Level 1")
 	print("Level 2")
