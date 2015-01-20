@@ -1,15 +1,23 @@
 import random
 import os
 import time
+alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
 def select_rand_word(data):
-	lists = []
-	while (len(lists)) != 10:
+	words = []
+	counter=0
+	while counter < 10:
 		length = (len(data) - 1)
 		random2 = random.randint(0, length)
-		lists.append(data[random2])
+		dat=str(data[random2]).lower()
+		newstr=""
+		for char in dat:
+			if char in alphabet:
+				newstr+=char
+		words.append(newstr)
 		data.remove(data[random2])
-	return lists
+		counter += 1
+	return words
 		
 def game(words):
 	for each in words:
@@ -18,14 +26,11 @@ def game(words):
 	os.system('clear')
 	counter = 0
 	score=0
-	while counter <= 10:
-		check = input("Enter a word from list")
-		for i in words:
-			if i == check:
-				print("Correct")
-				words.remove(i)
-				score +=1
-		counter+=1
+	for word in words:
+		check = input("Enter a word from list").lower()
+		if word == check:
+			print("Correct")
+			score +=1
 	return score
         
 def menu():
