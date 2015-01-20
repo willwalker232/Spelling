@@ -25,7 +25,7 @@ def game(words):
 		counter+=1
 	return score
         
-def menu:
+def menu():
 	print("Level 1")
 	print("Level 2")
 	print("Level 3")

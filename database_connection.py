@@ -1,3 +1,4 @@
+import sqlite3
 def retrieve_words(level):
 	try:
 		# Creates or opens a file called mydb with a SQLite3 DB
