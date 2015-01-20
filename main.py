@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import game
 import database_connection
 import time 
@@ -13,4 +11,4 @@ words=game.select_rand_word(words)
 score=game.game(words)
 
 print (score)
->>>>>>> 808a0b04f2f9f80a72f5c5938afae6968e3da929
+
